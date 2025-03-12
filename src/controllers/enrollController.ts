@@ -5,5 +5,5 @@ export const enrollController = async (req: Request, res: Response): Promise<voi
     const { userId, courseId } = req.body;
     const message = JSON.stringify({ userId, courseId });
     await sendMessage('enrollmentQueue', message);
-    res.send('Enrollment request received');
+    res.send('Enrollment request received!');
 };
